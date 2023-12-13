@@ -42,6 +42,11 @@
     background: rgba(186, 227, 229, 1);
 }
 
+.linkHovered {
+    background: rgb(186, 227, 229);
+    border-radius: 5px;
+}
+
 .navigationLinkText {
     z-index: 1;
 }

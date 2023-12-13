@@ -9,7 +9,8 @@ import { useScrollStoreNav } from '@/stores/navScrollStore';
 
 export const Navbar = () => {
   const { isScrolled } = useScrollStoreNav();
-  const [hoveredIndex, setHoveredIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
   const router = useRouter();
   return (
     <nav
@@ -22,11 +23,14 @@ export const Navbar = () => {
     >
       {Object.values(navigations).map((navigation, index) => (
         <Link
-          className={styles.navigationLink}
+          className={`${styles.navigationLink} ${
+            activeIndex === index ? styles.linkHovered : ''
+          }`}
           href={navigation.ref}
           key={navigation.ref + index}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onClick={() => setActiveIndex(index)}
         >
           <span className={styles.navigationLinkText}>{navigation.title}</span>
           <svg
@@ -35,7 +39,9 @@ export const Navbar = () => {
             viewBox="0 0 19 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={hoveredIndex === index ? styles.hovered : ''}
+            className={`${hoveredIndex === index ? styles.hovered : ''} ${
+              activeIndex === index ? styles.hovered : ''
+            }`}
           >
             <path
               fillRule="evenodd"

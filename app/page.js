@@ -10,34 +10,22 @@ import { ThirdSection } from '@/components/home/thirdSection/thirdSection';
 
 export default function App({ posts }) {
   const loadMainContent = loadingStore((state) => state.loadMainContent);
-  const [isListenerActive, setIsListenerActive] = useState(true);
   const { setScrolled } = useScrollStoreNav();
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      console.log('Scroll', scrollY);
-
-      if (scrollY > 10 && isListenerActive) {
-        setScrolled(true);
-        setIsListenerActive(false);
-      } else if (scrollY < 12 && !isListenerActive) {
-        setScrolled(false);
-        setIsListenerActive(true);
-      }
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
     };
 
-    if (isListenerActive) {
-      window.addEventListener('scroll', handleScroll);
-    }
+    // Add event listener
+    window.addEventListener('scroll', handleScroll);
 
+    // Clean up
     return () => {
-      if (isListenerActive) {
-        window.removeEventListener('scroll', handleScroll);
-      }
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [isListenerActive, setScrolled]);
-
+  }, [setScrolled]);
   return (
     <>
       {loadMainContent && (

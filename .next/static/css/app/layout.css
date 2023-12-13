@@ -120,6 +120,11 @@
     background: rgba(186, 227, 229, 1);
 }
 
+.navbar_linkHovered__IRfED {
+    background: rgb(186, 227, 229);
+    border-radius: 5px;
+}
+
 .navbar_navigationLinkText__x1C7s {
     z-index: 1;
 }
