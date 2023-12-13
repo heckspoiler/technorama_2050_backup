@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import Header from '../components/header/header';
 import './globals.css';
+import { Navbar } from '@/components/navbar/navbar';
 import { SvgBackground } from '@/components/home/svgBackground/svgBackground';
 import { Splashscreen } from '@/components/general/splashscreen/splashscreen';
 import CustomCursor from '@/components/general/cursor/cursor';
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           <Splashscreen finishLoading={() => setIsLoading(false)} />
         ) : (
           <>
+            <Navbar />
             <CustomCursor />
             <Header />
             <SvgBackground />

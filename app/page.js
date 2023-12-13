@@ -4,8 +4,8 @@ import { SvgBackground } from '@/components/home/svgBackground/svgBackground';
 import { useScrollStoreNav } from '@/stores/navScrollStore';
 import loadingStore from '@/stores/initialLoading';
 import { useEffect } from 'react';
-import { FirstSection } from '@/components/home/firstSection/FirstSection';
-import { SecondSection } from '@/components/home/secondSection/SecondSection';
+import { FirstSection } from '@/components/home/firstSection/firstSection';
+import { SecondSection } from '@/components/home/secondSection/secondSection';
 import { ThirdSection } from '@/components/home/thirdSection/thirdSection';
 
 export default function App({ posts }) {
@@ -14,7 +14,7 @@ export default function App({ posts }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 1;
+      const isScrolled = window.scrollY > 100;
       console.log('isScrolled: ', isScrolled);
       setScrolled(isScrolled);
     };
@@ -29,7 +29,6 @@ export default function App({ posts }) {
     <>
       {loadMainContent && (
         <>
-          {console.log('Rendering Home and SvgBackground')}
           <SvgBackground />
           <FirstSection />
           <SecondSection />
