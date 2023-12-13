@@ -73,6 +73,87 @@
     box-shadow: none;
 }
 /*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/navbar/navbar.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+.navbar_navbar___TphW {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(85vh);
+    padding: 0 4vw;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, left 0.4s ease-in-out;
+
+}
+
+.navbar_navbarScrolled__SSM1R {
+    transform: translateY(0vh) translateX(-50%);
+    width: 60%;
+    left: 50%;
+    transition: transform 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
+
+
+.navbar_navigationLink__4GHgt {
+    text-transform: uppercase;
+    border: 1px solid var(--project-black);
+    font-size: 0.8rem;
+    width: calc(3rem + 8vw);
+    padding: 10px 20px;
+    background: rgba(153, 214, 218, 1);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    transition: background 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    border-radius: 5px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+
+
+.navbar_navigationLink__4GHgt:hover {
+    text-transform: uppercase;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background: rgba(186, 227, 229, 1);
+}
+
+.navbar_navigationLinkText__x1C7s {
+    z-index: 1;
+}
+
+.navbar_navigationLink__4GHgt::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgb(186, 227, 229);
+    transition: left 0.2s ease-in-out, top 0.2s ease-in-out;
+    border-radius: 5px;
+
+}
+
+
+.navbar_navigationLink__4GHgt:hover::before {
+    left: 0;
+    top: 0;
+}
+
+.navbar_navigationLink__4GHgt svg {
+    transform: rotate(45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar_hovered__rb__1 {
+    transform: rotate(135deg) !important;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/header/header.module.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************/
 .header_header__dGL52 {
@@ -178,87 +259,6 @@ a {
   html {
     color-scheme: dark;
   }
-}
-/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/navbar/navbar.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************************/
-.navbar_navbar___TphW {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(85vh) translateX(-50%);
-    left: 50%;
-    padding: 0 4vw;
-    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out;
-    background-color: red;
-}
-
-.navbar_navbarScrolled__SSM1R {
-    transform: translateY(0vh);
-    width: 60%;
-    transition: transform 0.4s ease-in-out, padding 0.4s ease-in-out;
-}
-
-
-.navbar_navigationLink__4GHgt {
-    text-transform: uppercase;
-    border: 1px solid var(--project-black);
-    font-size: 0.8rem;
-    width: calc(3rem + 8vw);
-    padding: 10px 20px;
-    background: rgba(153, 214, 218, 1);
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-    transition: background 0.2s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    border-radius: 5px;
-    font-weight: 600;
-    overflow: hidden;
-}
-
-
-
-.navbar_navigationLink__4GHgt:hover {
-    text-transform: uppercase;
-    border: 1px solid black;
-    padding: 10px 20px;
-    background: rgba(186, 227, 229, 1);
-}
-
-.navbar_navigationLinkText__x1C7s {
-    z-index: 1;
-}
-
-.navbar_navigationLink__4GHgt::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgb(186, 227, 229);
-    transition: left 0.2s ease-in-out, top 0.2s ease-in-out;
-    border-radius: 5px;
-
-}
-
-
-.navbar_navigationLink__4GHgt:hover::before {
-    left: 0;
-    top: 0;
-}
-
-.navbar_navigationLink__4GHgt svg {
-    transform: rotate(45deg);
-    transition: transform 0.2s ease-in-out;
-}
-
-.navbar_hovered__rb__1 {
-    transform: rotate(135deg) !important;
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/svgBackground/svgBackground.module.css ***!

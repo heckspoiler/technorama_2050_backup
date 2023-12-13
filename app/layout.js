@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
           <Splashscreen finishLoading={() => setIsLoading(false)} />
         ) : (
           <>
-            <Navbar />
             <CustomCursor />
             <Header />
             <SvgBackground />
