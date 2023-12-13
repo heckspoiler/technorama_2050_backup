@@ -23,6 +23,12 @@
       "static/css/app/get-informed/page.css",
       "static/chunks/app/get-informed/page.js"
     ],
+    "/home/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/home/page.css",
+      "static/chunks/app/home/page.js"
+    ],
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
