@@ -12,7 +12,7 @@ export default function App({ posts }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
+      const isScrolled = window.scrollY > 5;
       console.log('isScrolled: ', isScrolled);
       setScrolled(isScrolled);
     };

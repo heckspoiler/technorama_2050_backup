@@ -4,11 +4,15 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from './navbar.module.css';
 import { navigations } from './navigations';
+import { useScrollStoreNav } from '@/stores/navScrollStore';
 
 export const Navbar = () => {
+  const { isScrolled } = useScrollStoreNav();
   const [hoveredIndex, setHoveredIndex] = useState(0);
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={`${styles.navbar} ${isScrolled ? styles.navbarScrolled : ''}`}
+    >
       {Object.values(navigations).map((navigation, index) => (
         <Link
           className={styles.navigationLink}

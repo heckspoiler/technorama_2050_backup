@@ -23,5 +23,5 @@ export const usePostsStore = create((set) => ({
 // console.log('Posts from Home: ', wordPressPosts);
 
 // if (!wordPressPosts || wordPressPosts.length === 0) {
-// return <h1>Loading posts...</h1>;
+// return <h1>No posts right now...</h1>;
 // }
