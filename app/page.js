@@ -1,10 +1,12 @@
 'use client';
 
-import Home from './home/page';
 import { SvgBackground } from '@/components/home/svgBackground/svgBackground';
 import { useScrollStoreNav } from '@/stores/navScrollStore';
 import loadingStore from '@/stores/initialLoading';
 import { useEffect } from 'react';
+import { FirstSection } from '@/components/home/firstSection/FirstSection';
+import { SecondSection } from '@/components/home/secondSection/SecondSection';
+import { ThirdSection } from '@/components/home/thirdSection/thirdSection';
 
 export default function App({ posts }) {
   const loadMainContent = loadingStore((state) => state.loadMainContent);
@@ -12,7 +14,7 @@ export default function App({ posts }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 5;
+      const isScrolled = window.scrollY > 1;
       console.log('isScrolled: ', isScrolled);
       setScrolled(isScrolled);
     };
@@ -29,7 +31,9 @@ export default function App({ posts }) {
         <>
           {console.log('Rendering Home and SvgBackground')}
           <SvgBackground />
-          <Home />
+          <FirstSection />
+          <SecondSection />
+          <ThirdSection />
         </>
       )}
     </>

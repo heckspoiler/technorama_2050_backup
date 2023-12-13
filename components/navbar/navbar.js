@@ -14,7 +14,10 @@ export const Navbar = () => {
   return (
     <nav
       className={`${styles.navbar} ${
-        isScrolled && router.pathname !== '/' ? styles.navbarScrolled : ''
+        (isScrolled && router.pathname !== '/') ||
+        (isScrolled && router.pathname !== '/home')
+          ? styles.navbarScrolled
+          : ''
       }`}
     >
       {Object.values(navigations).map((navigation, index) => (
