@@ -7,7 +7,7 @@ const HoverImage = () => {
   useEffect(() => {
     let particles = [];
     let img;
-    const PARTICLE_SIZE = 10;
+    const PARTICLE_SIZE = 12;
     const RESOLUTION = 10;
     const MAX_FORCE = 10;
     const MIN_FORCE = 0;
