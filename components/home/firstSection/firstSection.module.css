@@ -29,7 +29,7 @@
     padding-top: 5rem;
 }
 
-.char {
+.teste {
     transform: translateY(-115px);
     transition: transform 0.5s ease-in-out;
     opacity: 0;

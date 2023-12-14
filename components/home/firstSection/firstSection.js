@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import HoverImage from './image/hoverImage';
 import Image from 'next/image';
 import styles from './firstSection.module.css';
@@ -8,11 +8,11 @@ import { useGSAP } from '@gsap/react';
 
 export const FirstSection = () => {
   const containerOne = useRef();
-  const containerTwo = useRef();
 
   useGSAP(
     () => {
-      gsap.to('.char', {
+      console.log('containerOne', containerOne);
+      gsap.to('.teste', {
         y: 0,
         opacity: 1,
         stagger: 0.05,
@@ -26,16 +26,14 @@ export const FirstSection = () => {
   return (
     <div className={styles.firstContainer}>
       <div className={styles.heroContainer}>
-        <div className={styles.twentyfifty}>
+        <div className={styles.twentyfifty} ref={containerOne}>
           <h1 className={styles.twenty}>
-            <span className={styles.char} ref={containerOne}>
-              2
-            </span>
-            <span className={styles.char}>0</span>
+            <span className={`${styles.test} teste`}>2</span>
+            <span className={`${styles.test} teste`}>0</span>
           </h1>
-          <h1 className={styles.fifty} ref={containerTwo}>
-            <span className={styles.char}>5</span>
-            <span className={styles.char}>0</span>
+          <h1 className={styles.fifty}>
+            <span className={`${styles.test} teste`}>5</span>
+            <span className={`${styles.test} teste`}>0</span>
           </h1>
         </div>
         <div>
