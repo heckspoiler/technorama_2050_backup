@@ -1,39 +1,57 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import HoverImage from './image/hoverImage';
 import Image from 'next/image';
 import styles from './firstSection.module.css';
-import SplitType from 'split-type';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import { motion as m } from 'framer-motion';
 
 export const FirstSection = () => {
-  const containerOne = useRef();
-
-  useGSAP(
-    () => {
-      console.log('containerOne', containerOne);
-      gsap.to('.teste', {
-        y: 0,
-        opacity: 1,
-        stagger: 0.05,
-        delay: 0.2,
-        duration: 0.5,
-      });
-    },
-    { scope: containerOne.current }
-  );
-
+  const initial = { y: 200, opacity: 0 }; // Start from below and invisible
+  const animate = { y: 0, opacity: 1 }; // Move to original position and fully visible
+  const transition = {
+    type: 'spring',
+    stiffness: 100,
+    duration: 0.5,
+  };
+  const delay = 0.5;
   return (
     <div className={styles.firstContainer}>
       <div className={styles.heroContainer}>
-        <div className={styles.twentyfifty} ref={containerOne}>
-          <h1 className={styles.twenty}>
-            <span className={`${styles.test} teste`}>2</span>
-            <span className={`${styles.test} teste`}>0</span>
+        <div className={styles.twentyfifty}>
+          <h1>
+            <m.span
+              className={styles.twenty}
+              initial={initial}
+              animate={animate}
+              transition={transition}
+            >
+              2
+            </m.span>
+            <m.span
+              className={styles.twenty}
+              initial={initial}
+              animate={animate}
+              transition={transition}
+            >
+              0
+            </m.span>
           </h1>
           <h1 className={styles.fifty}>
-            <span className={`${styles.test} teste`}>5</span>
-            <span className={`${styles.test} teste`}>0</span>
+            <m.span
+              initial={initial}
+              animate={animate}
+              transition={transition}
+              delay={delay}
+            >
+              5
+            </m.span>
+            <m.span
+              initial={initial}
+              animate={animate}
+              transition={transition}
+              delay={delay}
+            >
+              0
+            </m.span>
           </h1>
         </div>
         <div>

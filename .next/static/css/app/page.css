@@ -41,11 +41,6 @@
     padding-top: 5rem;
 }
 
-.firstSection_teste__ncahU {
-    transform: translateY(-115px);
-    transition: transform 0.5s ease-in-out;
-    opacity: 0;
-}
 
 
 .firstSection_twentyfifty__x1xcY h1 {
@@ -55,6 +50,7 @@
     background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
+
 }
 
 .firstSection_twentyfifty__x1xcY h1:nth-of-type(2) {
