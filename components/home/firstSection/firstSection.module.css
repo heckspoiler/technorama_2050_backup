@@ -27,8 +27,12 @@
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
+}
 
-
+.char {
+    transform: translateY(-115px);
+    transition: transform 0.5s ease-in-out;
+    opacity: 0;
 }
 
 
@@ -38,10 +42,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    /* Makes the text transparent, showing the background */
     -webkit-text-fill-color: transparent;
-    /* For Safari compatibility */
-
 }
 
 .twentyfifty h1:nth-of-type(2) {

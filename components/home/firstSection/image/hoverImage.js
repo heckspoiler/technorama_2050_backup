@@ -11,7 +11,7 @@ const HoverImage = () => {
     const RESOLUTION = 20;
     const MAX_FORCE = 10;
     const MIN_FORCE = 0;
-    const EFFECT_DISTANCE = 20;
+    const EFFECT_DISTANCE = 50;
 
     const sketch = (p) => {
       p.preload = () => {
