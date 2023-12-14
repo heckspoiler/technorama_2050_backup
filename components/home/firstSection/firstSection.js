@@ -1,4 +1,5 @@
 import React from 'react';
+import HoverImage from './image/hoverImage';
 import Image from 'next/image';
 import styles from './firstSection.module.css';
 
@@ -11,12 +12,13 @@ export const FirstSection = () => {
           <h1 className={styles.fifty}>50</h1>
         </div>
         <div>
-          <Image
+          <HoverImage />
+          {/* <Image
             src="/images/home/hero_sketch.png"
             width={1405 / 1.8}
             height={556 / 1.8}
             alt="Technorama 2050 Hero Sketch"
-          />
+          /> */}
         </div>
       </div>
     </div>

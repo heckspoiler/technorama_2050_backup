@@ -28,14 +28,21 @@ export default function App({ posts }) {
   }, [setScrolled]);
   return (
     <>
-      {loadMainContent && (
+      {/* {loadMainContent && (
         <>
           <SvgBackground />
           <FirstSection />
           <SecondSection />
           <ThirdSection />
         </>
-      )}
+      )} enable again as soon as animation is needed*/}
+
+      <>
+        <SvgBackground />
+        <FirstSection />
+        <SecondSection />
+        <ThirdSection />
+      </>
     </>
   );
 }
