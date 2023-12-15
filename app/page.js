@@ -26,7 +26,7 @@ export default function App({ posts }) {
       animationTriggered.current = false; // Reset
     }
     const gradientAngle = (currentScroll / 10) % 360;
-    document.body.style.background = `linear-gradient(${gradientAngle}deg, rgba(186,227,229,1) 0%, rgba(235,240,162,1) 30%, rgba(186,227,229,1) 100%)`;
+    // document.body.style.background = `linear-gradient(${gradientAngle}deg, rgba(186,227,229,1) 0%, rgba(235,240,162,1) 30%, rgba(186,227,229,1) 100%)`;
   };
 
   useEffect(() => {
