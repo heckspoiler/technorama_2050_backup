@@ -1,0 +1,16 @@
+.videoContainer {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.videoContainer video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

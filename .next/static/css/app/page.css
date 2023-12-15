@@ -1,5 +1,5 @@
 /*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/firstSection/firstSection.module.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/home/firstSection/firstSection.module.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************/
 .firstSection_firstContainer__NJEV_ {
     height: calc(92vh);
@@ -47,19 +47,51 @@
 .firstSection_twentyfifty__x1xcY h1:nth-of-type(2) {
     transform: translateY(-13vh)
 }
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/home/secondSection/video/videoComponent.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+.videoComponent_videoContainer__vqwnh {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.videoComponent_videoContainer__vqwnh video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/secondSection/secondSection.module.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/home/secondSection/secondSection.module.css ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************/
 .secondSection_secondContainer__kh9XT {
     height: 100vh;
     width: 100%;
     border: 1px solid var(--project-black);
+    scroll-snap-stop: always;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.secondSection_secondContainer__kh9XT h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13rem;
+    color: white;
+    mix-blend-mode: difference;
 }
 /*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/thirdSection/thirdSection.module.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./components/home/thirdSection/thirdSection.module.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************/
 .thirdSection_thirdContainer__vlc86 {
-    height: calc(100vh - 6rem);
+    height: 100vh;
     width: 100%;
     border: 1px solid var(--project-black);
 

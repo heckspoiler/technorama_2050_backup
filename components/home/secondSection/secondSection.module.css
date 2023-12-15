@@ -2,4 +2,16 @@
     height: 100vh;
     width: 100%;
     border: 1px solid var(--project-black);
+    scroll-snap-stop: always;
+    position: sticky;
+    top: 0;
+}
+
+.secondContainer h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 13rem;
+    color: white;
+    mix-blend-mode: difference;
 }
