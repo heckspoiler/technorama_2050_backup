@@ -1,5 +1,5 @@
 .secondContainer {
-    height: 100vh;
+    height: calc(100vh - 8rem);
     width: 100%;
     border: 1px solid var(--project-black);
     scroll-snap-stop: always;
