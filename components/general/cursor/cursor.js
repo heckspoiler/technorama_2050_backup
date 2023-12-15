@@ -14,33 +14,17 @@ export default function CustomCursor() {
     }
   };
 
-  const onMouseEnter = () => {
-    if (cursorRef.current) {
-      cursorRef.current.classList.add(styles.cursorExpanded);
-    }
-  };
-
-  const onMouseLeave = () => {
-    if (cursorRef.current) {
-      cursorRef.current.classList.remove(styles.cursorExpanded);
-    }
-  };
-
   useEffect(() => {
     if (typeof window !== 'undefined') {
       document.addEventListener('mousemove', moveCursor);
-      const linksAndButtons = document.querySelectorAll('a, button');
-      linksAndButtons.forEach((elem) => {
-        elem.addEventListener('mouseenter', onMouseEnter);
-        elem.addEventListener('mouseleave', onMouseLeave);
-      });
+      const onMouseEnter = () => {
+        if (cursorRef.current) {
+          cursorRef.current.style.mixBlendMode = 'normal';
+        }
+      };
 
       return () => {
         document.removeEventListener('mousemove', moveCursor);
-        linksAndButtons.forEach((elem) => {
-          elem.removeEventListener('mouseenter', onMouseEnter);
-          elem.removeEventListener('mouseleave', onMouseLeave);
-        });
       };
     }
   }, []);

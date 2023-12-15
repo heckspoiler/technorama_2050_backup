@@ -7,8 +7,8 @@ const HoverImage = () => {
   useEffect(() => {
     let particles = [];
     let img;
-    const PARTICLE_SIZE = 12;
-    const RESOLUTION = 15;
+    const PARTICLE_SIZE = 20;
+    const RESOLUTION = 30;
     const MAX_FORCE = 10;
     const MIN_FORCE = 0;
     const EFFECT_DISTANCE = 50;
@@ -19,13 +19,18 @@ const HoverImage = () => {
       };
 
       p.setup = () => {
-        let cnv = p.createCanvas(p.windowWidth / 1.2, p.windowHeight / 1.2);
+        let cnv = p.createCanvas(
+          p.windowWidth / 1.2,
+          p.windowHeight / 1.2,
+          p.WEBGL
+        );
         cnv.style('position', 'absolute');
         cnv.style('inset', 0);
         cnv.style('z-index', -1);
         cnv.style('top', '50%');
         cnv.style('left', '50%');
         cnv.style('transform', 'translate(-50%, -50%)');
+        p.frameRate(15);
         spawnParticles();
       };
 
@@ -101,9 +106,12 @@ const HoverImage = () => {
         }
 
         draw() {
+          p.push();
+          p.translate(this.x - p.width / 2, this.y - p.height / 2);
           p.fill(this.color);
           p.noStroke();
-          p.ellipse(this.x, this.y, PARTICLE_SIZE);
+          p.ellipse(0, 0, PARTICLE_SIZE);
+          p.pop();
         }
       }
 

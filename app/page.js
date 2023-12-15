@@ -1,36 +1,48 @@
 'use client';
 
-import { SvgBackground } from '@/components/home/svgBackground/svgBackground';
 import { useScrollStoreNav } from '@/stores/navScrollStore';
 import loadingStore from '@/stores/initialLoading';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { FirstSection } from '@/components/home/firstSection/firstSection';
 import { SecondSection } from '@/components/home/secondSection/secondSection';
 import { ThirdSection } from '@/components/home/thirdSection/thirdSection';
 
 export default function App({ posts }) {
-  const loadMainContent = loadingStore((state) => state.loadMainContent);
   const { setScrolled } = useScrollStoreNav();
+  const [triggerAnimation, setTriggerAnimation] = useState(false);
+  const animationTriggered = useRef(false);
+
+  const handleScroll = () => {
+    const threshold = 10;
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > threshold && !animationTriggered.current) {
+      setTriggerAnimation(true);
+      console.log('trigger');
+      animationTriggered.current = true; // Mark as triggered
+    } else if (currentScroll <= threshold && animationTriggered.current) {
+      setTriggerAnimation(false); // Trigger the reverse animation
+      console.log('reverse');
+      animationTriggered.current = false; // Reset
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      setScrolled(isScrolled);
-    };
+    setScrolled(triggerAnimation);
 
-    // Add event listener
     window.addEventListener('scroll', handleScroll);
 
     // Clean up
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setScrolled]);
+  }, [triggerAnimation, setScrolled]);
+
   return (
     <>
       {/* {loadMainContent && (
         <>
-          <SvgBackground />
+  
           <FirstSection />
           <SecondSection />
           <ThirdSection />
@@ -38,7 +50,6 @@ export default function App({ posts }) {
       )} enable again as soon as animation is needed*/}
 
       <>
-        <SvgBackground />
         <FirstSection />
         <SecondSection />
         <ThirdSection />

@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Inter } from 'next/font/google';
 import Header from '../components/header/header';
 import './globals.css';
-
-import { SvgBackground } from '@/components/home/svgBackground/svgBackground';
 import { Splashscreen } from '@/components/general/splashscreen/splashscreen';
 import CustomCursor from '@/components/general/cursor/cursor';
 import { usePathname } from 'next/navigation';
@@ -28,7 +26,6 @@ export default function RootLayout({ children }) {
           <>
             <CustomCursor />
             <Header />
-            <SvgBackground />
             {children}
           </>
         )}
