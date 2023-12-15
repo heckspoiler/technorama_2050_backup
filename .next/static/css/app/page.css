@@ -1,0 +1,75 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/svgBackground/svgBackground.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+.svgBackground_svgBackground__hDaoq {
+    z-index: -1000;
+    position: fixed;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/firstSection/firstSection.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.firstSection_firstContainer__NJEV_ {
+    height: calc(92vh);
+    width: 100%;
+    z-index: -1;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+.firstSection_heroContainer__igp6z {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 6rem;
+    padding-left: 2rem;
+
+}
+
+
+.firstSection_twentyfifty__x1xcY {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+
+
+.firstSection_twentyfifty__x1xcY h1 {
+    font-size: 16rem;
+    background: linear-gradient(0deg, rgba(177, 135, 164, 1) 0%, rgba(58, 58, 57, 1) 33%, rgba(58, 58, 57, 1) 51%, rgba(58, 58, 57, 1) 60%, rgba(177, 135, 164, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.firstSection_twentyfifty__x1xcY h1:nth-of-type(2) {
+    transform: translateY(-13vh)
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/secondSection/secondSection.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+.secondSection_secondContainer__kh9XT {
+    height: 100vh;
+    width: 100%;
+    border: 1px solid var(--project-black);
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/home/thirdSection/thirdSection.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************/
+.thirdSection_thirdContainer__vlc86 {
+    height: calc(100vh - 6rem);
+    width: 100%;
+    border: 1px solid var(--project-black);
+
+}
