@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import styles from './navbar.module.css';
 import { navigations } from './navigations';
 import { useScrollStoreNav } from '@/stores/navScrollStore';
+import { motion as m } from 'framer-motion';
 
 export const Navbar = () => {
   const { isScrolled } = useScrollStoreNav();

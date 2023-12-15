@@ -5,53 +5,17 @@ import styles from './firstSection.module.css';
 import { motion as m } from 'framer-motion';
 
 export const FirstSection = () => {
-  const initial = { y: 200, opacity: 0 }; // Start from below and invisible
-  const animate = { y: 0, opacity: 1 }; // Move to original position and fully visible
-  const transition = {
-    type: 'spring',
-    stiffness: 100,
-    duration: 0.5,
-  };
-  const delay = 0.5;
   return (
     <div className={styles.firstContainer}>
       <div className={styles.heroContainer}>
         <div className={styles.twentyfifty}>
           <h1>
-            <m.span
-              className={styles.twenty}
-              initial={initial}
-              animate={animate}
-              transition={transition}
-            >
-              2
-            </m.span>
-            <m.span
-              className={styles.twenty}
-              initial={initial}
-              animate={animate}
-              transition={transition}
-            >
-              0
-            </m.span>
+            <span className={styles.twenty}>2</span>
+            <span className={styles.twenty}>0</span>
           </h1>
           <h1 className={styles.fifty}>
-            <m.span
-              initial={initial}
-              animate={animate}
-              transition={transition}
-              delay={delay}
-            >
-              5
-            </m.span>
-            <m.span
-              initial={initial}
-              animate={animate}
-              transition={transition}
-              delay={delay}
-            >
-              0
-            </m.span>
+            <span>5</span>
+            <span>0</span>
           </h1>
         </div>
         <div>

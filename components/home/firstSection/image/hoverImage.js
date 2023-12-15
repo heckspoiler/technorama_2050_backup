@@ -8,7 +8,7 @@ const HoverImage = () => {
     let particles = [];
     let img;
     const PARTICLE_SIZE = 12;
-    const RESOLUTION = 20;
+    const RESOLUTION = 15;
     const MAX_FORCE = 10;
     const MIN_FORCE = 0;
     const EFFECT_DISTANCE = 50;
@@ -19,10 +19,13 @@ const HoverImage = () => {
       };
 
       p.setup = () => {
-        let cnv = p.createCanvas(p.windowWidth, p.windowHeight);
+        let cnv = p.createCanvas(p.windowWidth / 1.2, p.windowHeight / 1.2);
         cnv.style('position', 'absolute');
         cnv.style('inset', 0);
         cnv.style('z-index', -1);
+        cnv.style('top', '50%');
+        cnv.style('left', '50%');
+        cnv.style('transform', 'translate(-50%, -50%)');
         spawnParticles();
       };
 
