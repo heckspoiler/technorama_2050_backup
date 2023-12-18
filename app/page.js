@@ -1,5 +1,3 @@
-'use client';
-
 import { useScrollStoreNav } from '@/stores/navScrollStore';
 import loadingStore from '@/stores/initialLoading';
 import { useEffect, useState, useRef } from 'react';

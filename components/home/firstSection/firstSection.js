@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import HoverImage from './image/hoverImage';
 import Image from 'next/image';
